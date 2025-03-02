@@ -1,5 +1,27 @@
-# stanford-cs149
-CMU 15-418/Stanford CS149: Parallel Computing
-Kayvon Fatahalian 教授此前在 CMU 开了 15-418 这门课，后来他成为 Stanford 的助理教授后又开了类似的课程 CS149。但总体来说，15-418 包含的课程内容更丰富，并且有课程回放，但 CS149 的编程作业更 fashion 一些。我个人是观看的 15-418 的课程录影但完成的 CS149 的作业。
+# Stanford CS149: Parallel Computing
 
-这门课会带你深入理解现代并行计算架构的设计原则与必要权衡，并学会如何充分利用硬件资源以及软件编程框架（例如 CUDA，MPI，OpenMP 等）编写高性能的并行程序。由于并行计算架构的复杂性，这门课会涉及诸多高级体系结构与网络通信的内容，知识点相当底层且硬核。与此同时，5 个编程作业则是从软件的层面培养学生对上层抽象的理解与运用，具体会让你分析并行程序的瓶颈、编写多线程同步代码、学习 CUDA 编程、OpenMP 编程以及前段时间大热的 Spark 框架等等。真正意义上将理论与实践完美地结合在了一起。
+## Overview
+
+**Course Code:** CMU 15-418 / Stanford CS149  
+**Instructor:** Kayvon Fatahalian  
+
+This repository contains materials and resources for Stanford's CS149 course on Parallel Computing. The course is designed to provide students with a comprehensive understanding of parallel computing principles, methodologies, and applications, with a strong emphasis on practical implementation.
+
+## Course Description
+
+Stanford CS149 focuses on the fundamental concepts of parallel computing, covering both theoretical foundations and practical applications. Students will explore various parallel architectures, programming paradigms, and performance optimization techniques. Key topics include:
+
+- Parallel algorithms and data structures
+- Multi-threading and concurrency
+- Distributed computing
+- Performance measurement and optimization
+- Case studies using frameworks such as OpenMP and Spark
+
+## Learning Objectives
+
+By the end of this course, students will be able to:
+
+- Understand the principles of parallel computing and its relevance in modern applications.
+- Design and implement parallel algorithms for a variety of computational problems.
+- Utilize parallel programming frameworks and libraries effectively.
+- Analyze and optimize the performance of parallel applications.
