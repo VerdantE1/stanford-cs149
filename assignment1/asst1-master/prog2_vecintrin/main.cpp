@@ -313,11 +313,26 @@ float arraySumVector(float* values, int N) {
   //
   // CS149 STUDENTS TODO: Implement your vectorized version of arraySumSerial here
   //
-  
-  for (int i=0; i<N; i+=VECTOR_WIDTH) {
+    __cs149_vec_float x;        // 存储 values 的矢量寄存器
+    __cs149_vec_float sumVec = _cs149_vset_float(0.f); // 初始化归约矢量为全零
+    __cs149_mask maskAll = _cs149_init_ones();
 
-  }
 
-  return 0.0;
+    //1.矢量化分块相加
+    for (int i=0; i<N; i+=VECTOR_WIDTH) {
+        _cs149_vload_float(x,values+i,maskAll);
+        _cs149_vadd_float(sumVec,sumVec,x,maskAll);
+    }
+
+    //2.将矢量寄存器中的值归约为标量
+    float result[VECTOR_WIDTH];
+    _cs149_vstore_float(result,sumVec, maskAll);
+    float final_sum = 0.0;
+    for(int i =0;i<VECTOR_WIDTH;i++)
+    {
+        final_sum += result[i];
+    }
+
+  return final_sum;
 }
 
